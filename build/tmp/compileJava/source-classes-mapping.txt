@@ -1,0 +1,5 @@
+com/mcxiv/app/PluginTester.java
+ com.mcxiv.app.PluginTester
+ com.mcxiv.app.PluginTester$Pack
+com/mcxiv/app/CustomisedPluginAPI.java
+ com.mcxiv.app.CustomisedPluginAPI

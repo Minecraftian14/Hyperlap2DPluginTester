@@ -43,6 +43,10 @@ public class PluginTester extends ScreenAdapter {
         return plugin;
     }
 
+    public static CustomisedPluginAPI getAPI() {
+        return CustomisedPluginAPI.instance;
+    }
+
     public static void setTable(Table table) {
 
         if (instance == null || instance.root != null || table == null) return;

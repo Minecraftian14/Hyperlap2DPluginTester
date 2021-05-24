@@ -32,9 +32,15 @@ class CustomisedPluginAPI implements PluginAPI {
     private CustomisedPluginAPI() {
     }
 
+    SceneLoader loader;
+
     @Override
     public SceneLoader getSceneLoader() {
         return null;
+    }
+
+    public void setLoader(SceneLoader loader) {
+        this.loader = loader;
     }
 
     @Override
@@ -42,9 +48,15 @@ class CustomisedPluginAPI implements PluginAPI {
         return facade;
     }
 
+    PooledEngine pooledEngine;
+
     @Override
     public PooledEngine getEngine() {
         return null;
+    }
+
+    public PooledEngine getPooledEngine() {
+        return pooledEngine;
     }
 
     @Override
@@ -52,9 +64,15 @@ class CustomisedPluginAPI implements PluginAPI {
         return PluginTester.instance.stage;
     }
 
+    String pluginDir;
+
     @Override
     public String getPluginDir() {
         return null;
+    }
+
+    public void setPluginDir(String pluginDir) {
+        this.pluginDir = pluginDir;
     }
 
     @Override
@@ -62,14 +80,26 @@ class CustomisedPluginAPI implements PluginAPI {
         return System.getenv("APPDATA") + File.separator + ".hyperlap2d" + File.separator + "cache";
     }
 
+    String projectPath;
+
     @Override
     public String getProjectPath() {
         return null;
     }
 
+    public void setProjectPath(String projectPath) {
+        this.projectPath = projectPath;
+    }
+
+    TextureAtlas textureAtlas;
+
     @Override
     public TextureAtlas getProjectTextureAtlas() {
         return null;
+    }
+
+    public void setTextureAtlas(TextureAtlas textureAtlas) {
+        this.textureAtlas = textureAtlas;
     }
 
     @Override

@@ -19,6 +19,7 @@ import games.rednblack.h2d.common.vo.SceneConfigVO;
 import org.puremvc.java.interfaces.IFacade;
 import org.puremvc.java.patterns.facade.Facade;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -48,7 +49,7 @@ class CustomisedPluginAPI implements PluginAPI {
 
     @Override
     public Stage getUIStage() {
-        return null;
+        return PluginTester.instance.stage;
     }
 
     @Override
@@ -58,7 +59,7 @@ class CustomisedPluginAPI implements PluginAPI {
 
     @Override
     public String getCacheDir() {
-        return null;
+        return System.getenv("APPDATA") + File.separator + ".hyperlap2d" + File.separator + "cache";
     }
 
     @Override
@@ -146,9 +147,15 @@ class CustomisedPluginAPI implements PluginAPI {
         return null;
     }
 
+    EditorConfigVO editorConfigVO = new EditorConfigVO();
+
     @Override
     public EditorConfigVO getEditorConfig() {
-        return null;
+        return editorConfigVO;
+    }
+
+    public void setEditorConfigVO(EditorConfigVO editorConfigVO) {
+        this.editorConfigVO = editorConfigVO;
     }
 
     @Override

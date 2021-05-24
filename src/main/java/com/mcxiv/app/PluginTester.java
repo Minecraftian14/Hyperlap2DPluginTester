@@ -17,8 +17,8 @@ import java.util.concurrent.Executors;
 
 public class PluginTester extends ScreenAdapter {
 
-    private static PluginTester instance = null;
-    private static H2DPluginAdapter plugin;
+    static PluginTester instance = null;
+    static H2DPluginAdapter plugin;
 
     Stage stage;
     Table root;

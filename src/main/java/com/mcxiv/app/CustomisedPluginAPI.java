@@ -23,7 +23,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 
-class CustomisedPluginAPI implements PluginAPI {
+public class CustomisedPluginAPI implements PluginAPI {
 
     static final CustomisedPluginAPI instance = new CustomisedPluginAPI();
 

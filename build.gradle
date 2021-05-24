@@ -32,6 +32,17 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    manifest {
+        attributes 'Implementation-Title': 'Hyperlap2DPluginTester',
+                'Implementation-Version': version
+    }
+    baseName = project.name + '-sourcesJar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 test {
     useJUnitPlatform()
 }
